@@ -12,8 +12,34 @@
 
     <groupId>io.swagger.codegen.v3</groupId>
     <artifactId>swagger-codegen-generators</artifactId>
-    <version>1.0.25-SNAPSHOT</version>
+    <version>1.0.25-IOPPUBLISHING-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <!-- IOP Publishing custom build repository of the Swagger codegen generators -->
+    <scm>
+        <connection>git@github.com:ioppublishing/swagger-codegen-generators.git</connection>
+        <developerConnection>git@github.com:ioppublishing/swagger-codegen-generators.git</developerConnection>
+        <url>https://github.com/ioppublishing/swagger-codegen-generators</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- IOP Publishing Nexus repository where to store internal binaries and documentation -->
+    <distributionManagement>
+        <repository>
+            <id>internal.release</id>
+            <name>Internal Releases</name>
+            <url>http://kundt.ioppublishing.com:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>internal.snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://kundt.ioppublishing.com:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <site>
+            <id>nexus</id>
+            <url>dav:http://kundt.ioppublishing.com:8081/nexus/content/sites/Javadoc/${project.artifactId}</url>
+        </site>
+    </distributionManagement>
 
     <build>
         <plugins>
@@ -252,7 +278,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <swagger-codegen-version>3.0.24</swagger-codegen-version>
+        <swagger-codegen-version>3.0.25-IOPPUBLISHING-SNAPSHOT</swagger-codegen-version>
         <swagger-parser-version>2.0.23</swagger-parser-version>
         <swagger-core-version>2.1.4</swagger-core-version>
         <jackson-version>2.10.3</jackson-version>
