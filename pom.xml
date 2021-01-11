@@ -28,16 +28,16 @@
         <repository>
             <id>internal.release</id>
             <name>Internal Releases</name>
-            <url>http://kundt.ioppublishing.com:8081/nexus/content/repositories/releases</url>
+            <url>http://nexus.common.cld.iop.org:8081/nexus/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>internal.snapshots</id>
             <name>Internal Snapshots</name>
-            <url>http://kundt.ioppublishing.com:8081/nexus/content/repositories/snapshots</url>
+            <url>http://nexus.common.cld.iop.org:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
         <site>
             <id>nexus</id>
-            <url>dav:http://kundt.ioppublishing.com:8081/nexus/content/sites/Javadoc/${project.artifactId}</url>
+            <url>dav:http://nexus.common.cld.iop.org:8081/nexus/content/sites/Javadoc/${project.artifactId}</url>
         </site>
     </distributionManagement>
 
